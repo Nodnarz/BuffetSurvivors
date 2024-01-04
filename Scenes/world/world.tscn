@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyn0n437spevi"]
 
 [ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Art/Map/dirt_full_new.png" id="1_h0n8r"]
-[ext_resource type="PackedScene" uid="uid://15ws0d1rusyp" path="res://player/player.tscn" id="2_7tbwg"]
-[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Enemy/enemy.tscn" id="3_k334y"]
+[ext_resource type="PackedScene" uid="uid://cxpx7pvsig3p5" path="res://Scenes/player/player.tscn" id="2_7tbwg"]
+[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy.tscn" id="3_k334y"]
 
 [node name="World" type="Node2D"]
 

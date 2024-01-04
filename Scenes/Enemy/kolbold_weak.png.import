@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b24jttoigo4l7"
-path="res://.godot/imported/kolbold_weak.png-19f6465ab39072621568628d17191641.ctex"
+path="res://.godot/imported/kolbold_weak.png-77ace71226e430ce40a37bfc89995321.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/kolbold_weak.png"
-dest_files=["res://.godot/imported/kolbold_weak.png-19f6465ab39072621568628d17191641.ctex"]
+source_file="res://Scenes/Enemy/kolbold_weak.png"
+dest_files=["res://.godot/imported/kolbold_weak.png-77ace71226e430ce40a37bfc89995321.ctex"]
 
 [params]
 
