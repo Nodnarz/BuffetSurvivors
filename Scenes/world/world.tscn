@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyn0n437spevi"]
+[gd_scene load_steps=4 format=3 uid="uid://cpenk2sdfxn8u"]
 
-[ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Art/Map/dirt_full_new.png" id="1_h0n8r"]
+[ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Uitily/Art/Map/dirt_full_new.png" id="1_tje86"]
 [ext_resource type="PackedScene" uid="uid://cxpx7pvsig3p5" path="res://Scenes/player/player.tscn" id="2_7tbwg"]
 [ext_resource type="PackedScene" uid="uid://djdanixf3fljq" path="res://Uitily/enemy_spawner.tscn" id="3_rsofq"]
 
@@ -9,7 +9,7 @@
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 2
-texture = ExtResource("1_h0n8r")
+texture = ExtResource("1_tje86")
 region_enabled = true
 region_rect = Rect2(-1.115, -1.536, 4000, 4000)
 

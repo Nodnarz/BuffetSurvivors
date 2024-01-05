@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwxwk8hanx60b"
-path="res://.godot/imported/dirt_full_new.png-511716c9e23054ff123a576073bb8174.ctex"
+uid="uid://cvqkv4q6yfiq"
+path="res://.godot/imported/ice_spear.png-8de7425c32981216ebce40863c136fd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Map/dirt_full_new.png"
-dest_files=["res://.godot/imported/dirt_full_new.png-511716c9e23054ff123a576073bb8174.ctex"]
+source_file="res://Uitily/Art/Weapons/ice_spear.png"
+dest_files=["res://.godot/imported/ice_spear.png-8de7425c32981216ebce40863c136fd9.ctex"]
 
 [params]
 
