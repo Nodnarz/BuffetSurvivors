@@ -24,4 +24,4 @@ visibility_layer = 8
 
 [node name="ExperienceGem" parent="." instance=ExtResource("4_m7gb6")]
 position = Vector2(70, -33)
-experience = 10
+experience = 500

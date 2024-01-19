@@ -14,6 +14,10 @@ config/name="BuffetSurvivors"
 run/main_scene="res://Scenes/world/world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
+[autoload]
+
+UpgradeDb="*res://Uitily/upgrade_db.tscn"
+
 [display]
 
 window/size/viewport_width=640
