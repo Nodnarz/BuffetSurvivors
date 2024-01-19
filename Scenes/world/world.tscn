@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpenk2sdfxn8u"]
+[gd_scene load_steps=5 format=3 uid="uid://cpenk2sdfxn8u"]
 
 [ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Uitily/Art/Map/dirt_full_new.png" id="1_tje86"]
 [ext_resource type="PackedScene" uid="uid://cxpx7pvsig3p5" path="res://Scenes/player/player.tscn" id="2_7tbwg"]
 [ext_resource type="PackedScene" uid="uid://djdanixf3fljq" path="res://Uitily/enemy_spawner.tscn" id="3_rsofq"]
+[ext_resource type="PackedScene" uid="uid://drcjv647lkxdg" path="res://Uitily/Objects/experience_gem.tscn" id="4_m7gb6"]
 
 [node name="World" type="Node2D"]
 
@@ -20,3 +21,7 @@ region_rect = Rect2(-1.115, -1.536, 4000, 4000)
 [node name="Loot" type="Node2D" parent="." groups=["loot"]]
 light_mask = 8
 visibility_layer = 8
+
+[node name="ExperienceGem" parent="." instance=ExtResource("4_m7gb6")]
+position = Vector2(70, -33)
+experience = 10
