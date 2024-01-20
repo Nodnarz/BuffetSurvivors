@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://djdanixf3fljq"]
+[gd_scene load_steps=5 format=3 uid="uid://djdanixf3fljq"]
 
 [ext_resource type="Script" path="res://Uitily/enemy_spawner.gd" id="1_el748"]
 [ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy.tscn" id="2_b0m78"]
@@ -7,22 +7,14 @@
 [sub_resource type="Resource" id="Resource_v1yjf"]
 script = ExtResource("3_bhwit")
 time_start = 0
-time_end = 10
+time_end = 60
 enemy = ExtResource("2_b0m78")
-enemy_num = 1
-enemy_spawn_delay = 1
-
-[sub_resource type="Resource" id="Resource_gj2fm"]
-script = ExtResource("3_bhwit")
-time_start = 10
-time_end = 20
-enemy = ExtResource("2_b0m78")
-enemy_num = 4
-enemy_spawn_delay = 1
+enemy_num = 5
+enemy_spawn_delay = 0
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_el748")
-spawns = Array[ExtResource("3_bhwit")]([SubResource("Resource_v1yjf"), SubResource("Resource_gj2fm")])
+spawns = Array[ExtResource("3_bhwit")]([SubResource("Resource_v1yjf")])
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
