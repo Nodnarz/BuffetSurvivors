@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cxpx7pvsig3p5"]
 
 [ext_resource type="Script" path="res://Scenes/player/player.gd" id="1_a38mu"]
-[ext_resource type="Texture2D" uid="uid://c1l7b8rt8mjux" path="res://Uitily/Art/Player/player_sprite.png" id="2_uvrdr"]
+[ext_resource type="Texture2D" uid="uid://b2kp4igmb2ajp" path="res://Uitily/Art/Player/Character1.png" id="2_3ipx6"]
 [ext_resource type="PackedScene" uid="uid://b5c8xt0lka40w" path="res://Uitily/hurt_box.tscn" id="3_ubbxv"]
 [ext_resource type="Texture2D" uid="uid://mm1xh1tf7b2s" path="res://Uitily/Art/Exp/exp_background.png" id="4_ax8os"]
 [ext_resource type="Texture2D" uid="uid://dvakpfgmu5fif" path="res://Uitily/Art/Exp/exp_progress.png" id="5_c3xtu"]
@@ -35,7 +35,7 @@ script = ExtResource("1_a38mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_uvrdr")
+texture = ExtResource("2_3ipx6")
 hframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
