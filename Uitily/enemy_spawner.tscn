@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://djdanixf3fljq"]
 
 [ext_resource type="Script" path="res://Uitily/enemy_spawner.gd" id="1_el748"]
-[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy.tscn" id="2_b0m78"]
+[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy_kobold_weak.tscn" id="2_4t156"]
 [ext_resource type="Script" path="res://Uitily/spawn_info.gd" id="3_bhwit"]
 
-[sub_resource type="Resource" id="Resource_v1yjf"]
+[sub_resource type="Resource" id="Resource_evxwn"]
 script = ExtResource("3_bhwit")
 time_start = 0
 time_end = 60
-enemy = ExtResource("2_b0m78")
-enemy_num = 5
-enemy_spawn_delay = 0
+enemy = ExtResource("2_4t156")
+enemy_num = 3
+enemy_spawn_delay = 1
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_el748")
-spawns = Array[ExtResource("3_bhwit")]([SubResource("Resource_v1yjf")])
+spawns = Array[ExtResource("3_bhwit")]([SubResource("Resource_evxwn")])
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

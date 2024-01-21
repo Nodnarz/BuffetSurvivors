@@ -1,0 +1,112 @@
+[gd_scene load_steps=21 format=3 uid="uid://cpenk2sdfxn8u"]
+
+[ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Uitily/Art/Map/dirt_full_new.png" id="1_4ggy1"]
+[ext_resource type="PackedScene" uid="uid://cxpx7pvsig3p5" path="res://Scenes/player/player.tscn" id="2_31a1o"]
+[ext_resource type="PackedScene" uid="uid://djdanixf3fljq" path="res://Uitily/enemy_spawner.tscn" id="3_h72vd"]
+[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy_kobold_weak.tscn" id="4_hy3gd"]
+[ext_resource type="Script" path="res://Uitily/spawn_info.gd" id="5_xpptf"]
+[ext_resource type="PackedScene" uid="uid://kcspdjmn306u" path="res://Scenes/Enemy/enemy_kobold_strong.tscn" id="6_tsf37"]
+[ext_resource type="PackedScene" uid="uid://b50hnl8hmvcro" path="res://Scenes/Enemy/enemy_cyclops.tscn" id="7_rff2d"]
+[ext_resource type="PackedScene" uid="uid://7qspr5jyhmq8" path="res://Scenes/Enemy/enemy_juggernaut.tscn" id="8_ccftn"]
+[ext_resource type="PackedScene" uid="uid://1vxu8fjdq5lf" path="res://Scenes/Enemy/enemy_super.tscn" id="9_r028s"]
+[ext_resource type="AudioStream" uid="uid://ba4prci5i7e38" path="res://Uitily/Audio/battleThemeA.mp3" id="10_u5o16"]
+[ext_resource type="Script" path="res://Uitily/Audio/snd_music.gd" id="11_iudya"]
+
+[sub_resource type="Resource" id="Resource_1iuip"]
+script = ExtResource("5_xpptf")
+time_start = 0
+time_end = 30
+enemy = ExtResource("4_hy3gd")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_cfjkf"]
+script = ExtResource("5_xpptf")
+time_start = 30
+time_end = 201
+enemy = ExtResource("4_hy3gd")
+enemy_num = 2
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_16oyt"]
+script = ExtResource("5_xpptf")
+time_start = 60
+time_end = 180
+enemy = ExtResource("6_tsf37")
+enemy_num = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_ekiq5"]
+script = ExtResource("5_xpptf")
+time_start = 180
+time_end = 210
+enemy = ExtResource("7_rff2d")
+enemy_num = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_sq2li"]
+script = ExtResource("5_xpptf")
+time_start = 210
+time_end = 240
+enemy = ExtResource("6_tsf37")
+enemy_num = 2
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_l8ykw"]
+script = ExtResource("5_xpptf")
+time_start = 240
+time_end = 270
+enemy = ExtResource("7_rff2d")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_216c2"]
+script = ExtResource("5_xpptf")
+time_start = 240
+time_end = 240
+enemy = ExtResource("8_ccftn")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_dbo34"]
+script = ExtResource("5_xpptf")
+time_start = 270
+time_end = 300
+enemy = ExtResource("6_tsf37")
+enemy_num = 4
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_qshx6"]
+script = ExtResource("5_xpptf")
+time_start = 300
+time_end = 300
+enemy = ExtResource("9_r028s")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_4ggy1")
+region_enabled = true
+region_rect = Rect2(-1.115, -1.536, 4000, 4000)
+
+[node name="Player" parent="." instance=ExtResource("2_31a1o")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_h72vd")]
+spawns = Array[ExtResource("5_xpptf")]([SubResource("Resource_1iuip"), SubResource("Resource_cfjkf"), SubResource("Resource_16oyt"), SubResource("Resource_ekiq5"), SubResource("Resource_sq2li"), SubResource("Resource_l8ykw"), SubResource("Resource_216c2"), SubResource("Resource_dbo34"), SubResource("Resource_qshx6")])
+
+[node name="Loot" type="Node2D" parent="." groups=["loot"]]
+light_mask = 8
+visibility_layer = 8
+
+[node name="snd_music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("10_u5o16")
+volume_db = -20.214
+autoplay = true
+script = ExtResource("11_iudya")
+
+[connection signal="playerdeath" from="Player" to="snd_music" method="_on_player_playerdeath"]
