@@ -31,9 +31,9 @@ var additional_attacks = 0
 
 #IceSpear
 var icespear_ammo = 0
-var icespear_baseammo = 0
+var icespear_baseammo = 1
 var icespear_attackspeed = 1.5
-var icespear_level = 0
+var icespear_level = 1
 
 #Tornado
 var tornado_ammo = 0
@@ -181,23 +181,18 @@ func _on_enemy_detection_area_body_entered(body):
 	if not enemy_close.has(body):
 		enemy_close.append(body)
 
-
 func _on_enemy_detection_area_body_exited(body):
 	if enemy_close.has(body):
 		enemy_close.erase(body)
-
-
 
 func _on_grab_area_area_entered(area):
 	if area.is_in_group("loot"):
 		area.target = self
 
-
 func _on_collect_area_area_entered(area):
 	if area.is_in_group("loot"):
 		var gem_exp = area.collect()
 		calculate_experience(gem_exp)
-		
 
 func calculate_experience(gem_exp):
 	var exp_required = calculate_experiencecap()
