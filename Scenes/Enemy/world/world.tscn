@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=3 uid="uid://cpenk2sdfxn8u"]
 
-[ext_resource type="Texture2D" uid="uid://dwxwk8hanx60b" path="res://Uitily/Art/Map/dirt_full_new.png" id="1_4ggy1"]
+[ext_resource type="Texture2D" uid="uid://cylbqjcdvwwmh" path="res://Uitily/Art/Map/Rocks/DIRT.png" id="1_e2ri2"]
 [ext_resource type="PackedScene" uid="uid://cxpx7pvsig3p5" path="res://Scenes/player/player.tscn" id="2_31a1o"]
 [ext_resource type="PackedScene" uid="uid://djdanixf3fljq" path="res://Uitily/enemy_spawner.tscn" id="3_h72vd"]
-[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy_kobold_weak.tscn" id="4_hy3gd"]
+[ext_resource type="PackedScene" uid="uid://0o04simidobk" path="res://Scenes/Enemy/enemy_cheese.tscn" id="4_t0jwj"]
 [ext_resource type="Script" path="res://Uitily/spawn_info.gd" id="5_xpptf"]
 [ext_resource type="PackedScene" uid="uid://kcspdjmn306u" path="res://Scenes/Enemy/enemy_kobold_strong.tscn" id="6_tsf37"]
 [ext_resource type="PackedScene" uid="uid://b50hnl8hmvcro" path="res://Scenes/Enemy/enemy_cyclops.tscn" id="7_rff2d"]
@@ -16,7 +16,7 @@
 script = ExtResource("5_xpptf")
 time_start = 0
 time_end = 30
-enemy = ExtResource("4_hy3gd")
+enemy = ExtResource("4_t0jwj")
 enemy_num = 1
 enemy_spawn_delay = 0
 
@@ -24,7 +24,7 @@ enemy_spawn_delay = 0
 script = ExtResource("5_xpptf")
 time_start = 30
 time_end = 201
-enemy = ExtResource("4_hy3gd")
+enemy = ExtResource("4_t0jwj")
 enemy_num = 2
 enemy_spawn_delay = 0
 
@@ -89,7 +89,7 @@ enemy_spawn_delay = 0
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 2
-texture = ExtResource("1_4ggy1")
+texture = ExtResource("1_e2ri2")
 region_enabled = true
 region_rect = Rect2(-1.115, -1.536, 4000, 4000)
 

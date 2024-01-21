@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b24jttoigo4l7"
-path="res://.godot/imported/kolbold_weak.png-2ccfeb66d5986aa8476ae78dc2be257c.ctex"
+uid="uid://85hmipfgr36o"
+path="res://.godot/imported/OFFICEDOOR.png-0ad69678c96bcc735d9cddcb898290a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Uitily/Art/Enemy/kolbold_weak.png"
-dest_files=["res://.godot/imported/kolbold_weak.png-2ccfeb66d5986aa8476ae78dc2be257c.ctex"]
+source_file="res://Uitily/Art/Map/Doors/OFFICEDOOR.png"
+dest_files=["res://.godot/imported/OFFICEDOOR.png-0ad69678c96bcc735d9cddcb898290a1.ctex"]
 
 [params]
 

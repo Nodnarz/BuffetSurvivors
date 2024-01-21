@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn7p31kuj8g4e"
-path="res://.godot/imported/kolbold_strong.png-2084a523f3e7c818b0b8e2949980db63.ctex"
+uid="uid://n53a3uc64ray"
+path="res://.godot/imported/BIGSQUARES.png-db3e97fcacb4ac3cca6b6517c6d056cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Uitily/Art/Enemy/kolbold_strong.png"
-dest_files=["res://.godot/imported/kolbold_strong.png-2084a523f3e7c818b0b8e2949980db63.ctex"]
+source_file="res://Uitily/Art/Map/Tech/BIGSQUARES.png"
+dest_files=["res://.godot/imported/BIGSQUARES.png-db3e97fcacb4ac3cca6b6517c6d056cf.ctex"]
 
 [params]
 
