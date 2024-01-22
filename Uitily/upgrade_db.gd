@@ -3,36 +3,36 @@ extends Node
 const ICON_PATH = "res://Uitily/Art/Passives/"
 const WEAPON_PATH = "res://Uitily/Art/Weapons/"
 const UPGRADES = {
-	"icespear1": {
-		"icon": WEAPON_PATH + "ice_spear.png",
-		"displayname": "Ice Spear",
-		"details": "A spear of ice is thrown at a random enemy",
+	"knife1": {
+		"icon": WEAPON_PATH + "knife_0.png",
+		"displayname": "Knife",
+		"details": "A random assortmant of knives are thrown at a random enemy",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "weapon"
 	},
-	"icespear2": {
-		"icon": WEAPON_PATH + "ice_spear.png",
-		"displayname": "Ice Spear",
-		"details": "An addition Ice Spear is thrown",
+	"knife2": {
+		"icon": WEAPON_PATH + "knife_0.png",
+		"displayname": "Knife",
+		"details": "An addition Knife is thrown",
 		"level": "Level: 2",
-		"prerequisite": ["icespear1"],
+		"prerequisite": ["knife1"],
 		"type": "weapon"
 	},
-	"icespear3": {
-		"icon": WEAPON_PATH + "ice_spear.png",
-		"displayname": "Ice Spear",
-		"details": "Ice Spears now pass through another enemy and do + 3 damage",
+	"knife3": {
+		"icon": WEAPON_PATH + "knife_0.png",
+		"displayname": "Knife",
+		"details": "Knives now pass through another enemy and do + 3 damage",
 		"level": "Level: 3",
-		"prerequisite": ["icespear2"],
+		"prerequisite": ["knife2"],
 		"type": "weapon"
 	},
-	"icespear4": {
-		"icon": WEAPON_PATH + "ice_spear.png",
-		"displayname": "Ice Spear",
-		"details": "An additional 2 Ice Spears are thrown",
+	"knife4": {
+		"icon": WEAPON_PATH + "knife_0.png",
+		"displayname": "Knife",
+		"details": "An additional 2 Knives are thrown",
 		"level": "Level: 4",
-		"prerequisite": ["icespear3"],
+		"prerequisite": ["knife3"],
 		"type": "weapon"
 	},
 	"javelin1": {
