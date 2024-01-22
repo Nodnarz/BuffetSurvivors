@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://5q823no68fdp"]
+
+[ext_resource type="Texture2D" uid="uid://cvqkv4q6yfiq" path="res://Uitily/Art/Weapons/ice_spear.png" id="1_j71yb"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_j71yb")

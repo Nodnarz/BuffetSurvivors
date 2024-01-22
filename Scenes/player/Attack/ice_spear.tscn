@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddmfavpm2prqh"]
 
 [ext_resource type="Script" path="res://Scenes/player/Attack/ice_spear.gd" id="1_0ndml"]
-[ext_resource type="Texture2D" uid="uid://cvqkv4q6yfiq" path="res://Uitily/Art/Weapons/ice_spear.png" id="2_5geio"]
+[ext_resource type="PackedScene" uid="uid://5q823no68fdp" path="res://Scenes/player/Attack/ice_spear_sprite_2d.tscn" id="2_uk7ai"]
 [ext_resource type="AudioStream" uid="uid://u5ct13jrlrgl" path="res://Uitily/Audio/ice.wav" id="3_wo8fd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8ki6"]
@@ -14,8 +14,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_0ndml")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_5geio")
+[node name="Sprite2D" parent="." instance=ExtResource("2_uk7ai")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.250001, -1.25)
