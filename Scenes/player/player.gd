@@ -31,7 +31,7 @@ var additional_attacks = 0
 
 #IceSpear
 var icespear_ammo = 0
-var icespear_baseammo = 1
+var icespear_baseammo = 0
 var icespear_attackspeed = 1.5
 var icespear_level = 1
 
