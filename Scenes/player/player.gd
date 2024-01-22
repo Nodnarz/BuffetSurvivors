@@ -11,11 +11,11 @@ var experience_level = 1
 var collected_experience = 0
 
 #attacks
-var iceSpear = preload("res://Scenes/player/Attack/ice_spear.tscn")
+var knife = preload("res://Scenes/player/Attack/knife.tscn")
 var tornado = preload("res://Scenes/player/Attack/tornado.tscn")
 var javelin = preload("res://Scenes/player/Attack/javelin.tscn")
-@onready var iceSpearTimer = get_node("%IceSpearTimer")
-@onready var iceSpearAttackTimer = get_node("%IceSpearAttackTimer")
+@onready var knifeTimer = get_node("%KnifeTimer")
+@onready var knifeAttackTimer = get_node("%KnifeAttackTimer")
 @onready var tornadoTimer = get_node("%TornadoTimer")
 @onready var tornadoAttackTimer = get_node("%TornadoAttackTimer")
 @onready var javelinBase = get_node("%JavelinBase")
@@ -29,11 +29,11 @@ var spell_cooldown = 0
 var spell_size = 0
 var additional_attacks = 0
 
-#IceSpear
-var icespear_ammo = 0
-var icespear_baseammo = 0
-var icespear_attackspeed = 1.5
-var icespear_level = 1
+#knife
+var knife_ammo = 0
+var knife_baseammo = 0
+var knife_attackspeed = 1.5
+var knife_level = 1
 
 #Tornado
 var tornado_ammo = 0
@@ -74,7 +74,7 @@ var enemy_close = []
 signal playerdeath
 
 func _ready():
-	upgrade_character("icespear1")
+	upgrade_character("knife1")
 	attack()
 	set_expbar(experience,calculate_experiencecap())
 	_on_hurt_box_hurt(0,0,0)
@@ -104,10 +104,10 @@ func movement():
 	move_and_slide()
 
 func attack():
-	if icespear_level > 0:
-		iceSpearTimer.wait_time = icespear_attackspeed * (1 - spell_cooldown)
-		if iceSpearTimer.is_stopped():
-			iceSpearTimer.start()
+	if knife_level > 0:
+		knifeTimer.wait_time = knife_attackspeed * (1 - spell_cooldown)
+		if knifeTimer.is_stopped():
+			knifeTimer.start()
 	if tornado_level > 0:
 		tornadoTimer.wait_time = tornado_attackspeed * (1 - spell_cooldown)
 		if tornadoTimer.is_stopped():
@@ -123,22 +123,22 @@ func _on_hurt_box_hurt(damage, _angle, _knockback):
 		death()
 
 func _on_ice_spear_timer_timeout():
-	icespear_ammo += icespear_baseammo + additional_attacks
-	iceSpearAttackTimer.start()
+	knife_ammo += knife_baseammo + additional_attacks
+	knifeAttackTimer.start()
 
 
 func _on_ice_spear_attack_timer_timeout():
-	if icespear_ammo > 0:
-		var icespear_attack = iceSpear.instantiate()
-		icespear_attack.position = position
-		icespear_attack.target = get_random_target()
-		icespear_attack.level = icespear_level
-		add_child(icespear_attack)
-		icespear_ammo -= 1
-		if icespear_ammo > 0:
-			iceSpearAttackTimer.start()
+	if knife_ammo > 0:
+		var knife_attack = knife.instantiate()
+		knife_attack.position = position
+		knife_attack.target = get_random_target()
+		knife_attack.level = knife_level
+		add_child(knife_attack)
+		knife_ammo -= 1
+		if knife_ammo > 0:
+			knifeAttackTimer.start()
 		else:
-			iceSpearAttackTimer.stop()
+			knifeAttackTimer.stop()
 
 func _on_tornado_timer_timeout():
 	tornado_ammo += tornado_baseammo + additional_attacks
@@ -242,17 +242,17 @@ func levelUp():
 
 func upgrade_character(upgrade):
 	match upgrade:
-		"icespear1":
-			icespear_level = 1
-			icespear_baseammo += 1
-		"icespear2":
-			icespear_level = 2
-			icespear_baseammo += 1
-		"icespear3":
-			icespear_level = 3
-		"icespear4":
-			icespear_level = 4
-			icespear_baseammo += 2
+		"knife1":
+			knife_level = 1
+			knife_baseammo += 1
+		"knife2":
+			knife_level = 2
+			knife_baseammo += 1
+		"knife3":
+			knife_level = 3
+		"knife4":
+			knife_level = 4
+			knife_baseammo += 2
 		"tornado1":
 			tornado_level = 1
 			tornado_baseammo += 1
